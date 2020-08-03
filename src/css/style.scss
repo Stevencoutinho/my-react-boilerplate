@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+$main_color: orange;
+body {
+  height: 100vh;
+  text-align: center;
+}
+.welcome {
+  color: white;
+  background-color: $main_color;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+input[type="text"] {
+  border: solid gray 1px;
+  background-color: white;
+  text-align: left;
+}

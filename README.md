@@ -4,15 +4,15 @@
 ## Scripts
 ### Install
 ```
-npm install
+yarn install
 ```
 ### Start
 
 ```
-npm start
+yarn start
 ```
 
 ### Build
 ```
-npm run build
+yarn run build
 ```

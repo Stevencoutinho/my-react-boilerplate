@@ -9,11 +9,11 @@ module.exports = merge(common, {
   devServer: {
     inline: true,
     open: true,
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, 'src'),
     publicPath: '/',
     historyApiFallback: true,
     watchContentBase: true,
-    host: '127.0.0.1',
+    // host: '127.0.0.1',
     port: 3000,
   }
 });

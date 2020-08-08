@@ -16,6 +16,10 @@ module.exports = {
   // modules
   module: {
     rules: [
+      {// html
+        test: /\.html$/,
+        use: ['html-loader']
+      },
       {// js
         test: /\.jsx$/,
         exclude: /node_modules/,
@@ -26,31 +30,30 @@ module.exports = {
               presets: [['@babel/preset-env', {modules: false}]]
             }
           },
-          // {
-          //   loader: 'eslint-loader',
-          //   options: {
-          //     fix: true
-          //   }
-          // }
         ],
       },
       {// css
         test: /\.(css|sass|scss)$/,
         use: [
           'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          },
           'sass-loader'
         ]
       },
       {// img
-        test: /\.(jpg|JPG|jpeg|png|PING|gif|mp3|svg|ttf|woff2|woff|eot)/,
+        test: /\.(jpg|JPG|jpeg|png|PNG|PING|gif|mp3|svg|ttf|woff2|woff|eot)/,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: './images/[name].[ext]'
             }
-          }
+          },
         ]
       }
     ]

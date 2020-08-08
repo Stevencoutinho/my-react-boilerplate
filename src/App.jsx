@@ -1,5 +1,6 @@
 import React from 'react';
 import Text from './components/Text';
+import './images/icon.PNG';
 
 const App = () => {
   const [name, setName] = React.useState('world');
@@ -9,7 +10,10 @@ const App = () => {
   return (
     <main>
       <h1 className="welcome">Hello, {name}</h1>
-      <Text onChange={handleChange} />
+      <div>
+        <p><img src="./images/icon.PNG" alt="" width="100" /></p>
+        <Text onChange={handleChange} />
+      </div>
     </main>
   );
 };

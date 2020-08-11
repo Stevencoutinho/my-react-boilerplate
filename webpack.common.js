@@ -1,5 +1,6 @@
 const path = require('path');// pathモジュール
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HardSrcWebpack = require('hard-source-webpack-plugin');
 
 const src = path.resolve(__dirname, 'src');
 const public = path.resolve(__dirname, 'public');
@@ -63,7 +64,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: src + '/index.html',
       filename: 'index.html'
-    })
+    }),
+    new HardSrcWebpack()
   ],
   resolve: {
     extensions: ['.js', '.jsx', 'json']
